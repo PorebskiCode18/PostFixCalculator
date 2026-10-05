@@ -1,7 +1,12 @@
 #include <iostream>
 
-#include "src/factorial.hpp"
+#include "src/calculator.hpp"
+using namespace std;
 
 int main() {
-  std::cout << "The factorial of 5 is " << factorial(5) << std::endl;
+  Calculator calculator;
+  cout << calculator.evaluate("2 + 5") << endl;
+  cout << calculator.evaluate("3 + 6 * 5") << endl;
+  cout << calculator.evaluate("4 * (2 + 3)") << endl;
+  cout << calculator.evaluate("(7 + 9) / 8") << endl;
 }
